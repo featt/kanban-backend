@@ -24,12 +24,10 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const nestConfig = configService.get<NestConfig>('nest');
-  const corsConfig = configService.get<CorsConfig>('cors');
 
-  // Cors 
+  // Cors
   app.enableCors();
 
-
-  await app.listen(3000);
+  await app.listen(process.env.PORT || nestConfig.port || 3000);
 }
 bootstrap();
