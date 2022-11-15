@@ -26,10 +26,9 @@ async function bootstrap() {
   const nestConfig = configService.get<NestConfig>('nest');
   const corsConfig = configService.get<CorsConfig>('cors');
 
-  // Cors
-  if (corsConfig.enabled) {
-    app.enableCors();
-  }
+  // Cors 
+  app.enableCors();
+
 
   await app.listen(3000);
 }
