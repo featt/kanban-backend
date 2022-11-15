@@ -10,7 +10,7 @@
     "graphql"
   ],  
   "engines": {
-    "node": "18.10.0"
+    "node": "19.0.1"
   },
   "scripts": {
     "prebuild": "rimraf dist",
